@@ -43,9 +43,9 @@ export default function Home() {
             </p>
           </div>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white'>
-            <a href='https://twitter.com/Natanim_'><AiFillTwitterCircle className='animate-bounce' /></a>
-            <a href='https://www.linkedin.com/in/natanim-abesha/' target="_blank"><AiFillLinkedin className='animate-bounce' /></a>
-            <a href='https://github.com/NatanimA' target="_blank"><AiFillGithub className='animate-bounce' /></a>
+            <a href='https://twitter.com/Natanim_' target="_blank" rel="noreferrer"><AiFillTwitterCircle className='animate-bounce' /></a>
+            <a href='https://www.linkedin.com/in/natanim-abesha/' target="_blank" rel="noreferrer"><AiFillLinkedin className='animate-bounce' /></a>
+            <a href='https://github.com/NatanimA' target="_blank" rel="noreferrer"><AiFillGithub className='animate-bounce' /></a>
           </div>
           <div className='md:mt-4'>
             <Image className='m-auto max-w-full h-auto rounded-full flex' src={neo} alt="Profile picture"/>
