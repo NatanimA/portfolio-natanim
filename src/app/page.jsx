@@ -14,9 +14,14 @@ import web4 from '../../public/web4.png'
 import web5 from '../../public/web5.png'
 import web6 from '../../public/web6.png'
 import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function Home() {
   const [darkMode,setDarkMode] = useState(false)
+  const [state, handleSubmit] = useForm("xrgveedy");
+  if (state.succeeded) {
+    return <p>I will get back to you shortly.</p>;
+  }
   return (
     <div className={ darkMode ? "dark" : "" }>
       <Head />
@@ -26,7 +31,7 @@ export default function Home() {
             <h1 className='text-xl font-burtons dark:text-white'>Neo</h1>
             <ul className='flex items-center'>
               <li><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl mr-5' /></li>
-              <li><a className='bg-gradient-to-r from-cyan-500 to-teal-200 text-white px-4 py-2 rounded-lg ml-8' href='#'>Resume</a></li>
+              <li><a href="https://drive.google.com/file/d/1x-1NpBP-Fx45GCfHasqXQaKc-vsfkGDa/view?usp=sharing" target="_blank" className='bg-gradient-to-r from-cyan-500 to-teal-200 text-white px-4 py-2 rounded-lg ml-8' >Resume</a></li>
             </ul>
           </nav>
           <div className='text-center p-10'>
@@ -38,9 +43,9 @@ export default function Home() {
             </p>
           </div>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white'>
-            <AiFillTwitterCircle className='animate-bounce' />
-            <AiFillLinkedin className='animate-bounce' />
-            <AiFillGithub className='animate-bounce' />
+            <a href='https://twitter.com/Natanim_'><AiFillTwitterCircle className='animate-bounce' /></a>
+            <a href='https://www.linkedin.com/in/natanim-abesha/' target="_blank"><AiFillLinkedin className='animate-bounce' /></a>
+            <a href='https://github.com/NatanimA' target="_blank"><AiFillGithub className='animate-bounce' /></a>
           </div>
           <div className='md:mt-4'>
             <Image className='m-auto max-w-full h-auto rounded-full flex' src={neo} alt="Profile picture"/>
@@ -130,6 +135,41 @@ export default function Home() {
             <div className='basis-1/3 flex-1'>
               <Image className='rounded-lg object-cover' width={"100%"} height={"100%"} layout={"responsive"} src={web6} />
             </div>
+          </div>
+        </section>
+        <section class="contact-me-section h-screen-full p-10  h-max shadow-lg mt-32" id='contact-me'>
+          <div class="flex-col">
+            <h4 class="text-center text-2xl text-teal-500 font-medium">Contact me</h4>
+            <form onSubmit={handleSubmit} class="md:flex md:flex-col gap-10 flex flex-col justify-center mt-12">
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  class="border border-solid border-1 h-10 p-3"
+                  placeholder='Email Address'
+                  width={100}
+                />
+
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Message.."
+                class="border border-solid h-48 w-max-h-screen pl-2"
+              />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
+              <button className='p-5 text-xl hover:bg-gradient-to-r from-cyan-500 to-teal-200 w-fit m-auto rounded-md h-fit' type="submit" disabled={state.submitting}>
+                Contact me
+              </button>
+            </form>
           </div>
         </section>
       </main>
