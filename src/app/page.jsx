@@ -31,16 +31,13 @@ export default function Home() {
             <h1 className='text-xl font-burtons dark:text-white'>Neo</h1>
             <ul className='flex items-center'>
               <li><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl mr-5' /></li>
-              <li><a href="https://drive.google.com/file/d/1x-1NpBP-Fx45GCfHasqXQaKc-vsfkGDa/view?usp=sharing" target="_blank" className='bg-gradient-to-r from-cyan-500 to-teal-200 text-white px-4 py-2 rounded-lg ml-8' >Resume</a></li>
+              <li><a href="https://drive.google.com/file/d/1x-1NpBP-Fx45GCfHasqXQaKc-vsfkGDa/view?usp=sharing" target="_blank" rel="noreferrer" className='bg-gradient-to-r from-cyan-500 to-teal-200 text-white px-4 py-2 rounded-lg ml-8' >Resume</a></li>
             </ul>
           </nav>
           <div className='text-center p-10'>
             <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl'>Natanim Abesha</h2>
             <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>Full-Stack Developer</h3>
-            <p className='text-medium py-5 leading-8 text-gray-800 md:text-xl md:w-8/12 md:m-auto'>
-              Full-stack Developer providing services for programming need.
-              Join me down below and let's create something great.
-            </p>
+            <p className='text-medium py-5 leading-8 text-gray-800 md:text-xl md:w-8/12 md:m-auto'>Full-stack Developer providing services for programming need.Join me down below and let&apos;s create something great.</p>
           </div>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white'>
             <a href='https://twitter.com/Natanim_' target="_blank" rel="noreferrer"><AiFillTwitterCircle className='animate-bounce' /></a>
@@ -118,22 +115,22 @@ export default function Home() {
           </div>
           <div className='flex flex-col gap-10 lg:flex-row lg:flex-wrap'>
             <div className='basis-1/3 flex-1'>
-              <Image className='rounded-lg object-cover' width={"100%"} height={"100%"} layout={"responsive"} src={web1} />
+              <Image className='rounded-lg object-cover' width={"100%"} height={"100%"} layout={"responsive"} src={web1} alt="Project picture" />
             </div>
             <div className='basis-1/3 flex-1'>
-              <Image className='rounded-lg object-cover' width={"100%"} height={"100%"} layout={"responsive"} src={web2} />
+              <Image className='rounded-lg object-cover' width={"100%"} height={"100%"} layout={"responsive"} src={web2} alt="Project picture" />
             </div>
             <div className='basis-1/3 flex-1'>
-              <Image className='rounded-lg object-cover' width={"100%"} height={"100%"} layout={"responsive"} src={web3} />
+              <Image className='rounded-lg object-cover' width={"100%"} height={"100%"} layout={"responsive"} src={web3} alt="Project picture" />
             </div>
             <div className='basis-1/3 flex-1'>
-              <Image className='rounded-lg object-cover' width={"100%"} height={"100%"} layout={"responsive"} src={web4} />
+              <Image className='rounded-lg object-cover' width={"100%"} height={"100%"} layout={"responsive"} src={web4} alt="Project picture" />
             </div>
             <div className='basis-1/3 flex-1'>
-              <Image className='rounded-lg object-cover' width={"100%"} height={"100%"} layout={"responsive"} src={web5} />
+              <Image className='rounded-lg object-cover' width={"100%"} height={"100%"} layout={"responsive"} src={web5} alt="Project picture" />
             </div>
             <div className='basis-1/3 flex-1'>
-              <Image className='rounded-lg object-cover' width={"100%"} height={"100%"} layout={"responsive"} src={web6} />
+              <Image className='rounded-lg object-cover' width={"100%"} height={"100%"} layout={"responsive"} src={web6} alt="Project picture" />
             </div>
           </div>
         </section>
